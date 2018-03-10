@@ -10,4 +10,9 @@
 
 @implementation Presenter
 
+- (void)printTask{
+    NSString *printContent = self.mvpModel.content;
+    [self.mvpView printOnView:printContent];
+    
+}
 @end

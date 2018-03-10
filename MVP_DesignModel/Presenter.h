@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MVPModel.h"
+#import "MVPView.h"
 
 @interface Presenter : NSObject
 
+@property(nonatomic, retain) MVPModel *mvpModel;
+@property(nonatomic, retain) MVPView *mvpView;
+
+- (void) printTask;
 @end

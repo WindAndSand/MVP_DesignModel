@@ -18,6 +18,18 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
     
+    self.mvpModel = [MVPModel new];
+    self.mvpView = [MVPView new];
+    self.presenter = [Presenter new];
+    
+    self.mvpModel.content = @"line 0";
+    self.mvpView.frame = self.view.bounds;
+    [self.view addSubview:self.mvpView];
+    
+    self.presenter.mvpModel = self.mvpModel;
+    self.presenter.mvpView = self.mvpView;
+    
+    [self.presenter printTask];
     
 }
 

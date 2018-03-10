@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MVPModel.h"
+#import "MVPView.h"
+#import "Presenter.h"
 
 @interface ViewController : UIViewController
 
+//创建三个角色属性
+@property(nonatomic, retain) Presenter *presenter;
+@property(nonatomic, retain) MVPView *mvpView;
+@property(nonatomic, retain) MVPModel *mvpModel;
 
 @end
 

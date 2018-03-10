@@ -10,4 +10,6 @@
 
 @interface MVPView : UIView
 
+- (void) printOnView:(NSString *) content;
+
 @end

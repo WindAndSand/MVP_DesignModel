@@ -8,14 +8,30 @@
 
 #import "MVPView.h"
 
+@interface MVPView()
+
+@property(nonatomic, retain) UILabel *label;
+
+@end
+
 @implementation MVPView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.backgroundColor = [UIColor orangeColor];
+        self.label = [[UILabel alloc] initWithFrame:CGRectMake(30, 100, 300, 30)];
+        self.label.textColor = [UIColor blueColor];
+        
+        self.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [self addSubview:self.label];
+    }
+    return self;
 }
-*/
+
+- (void)printOnView:(NSString *)content{
+    self.label.text = content;
+}
+
 
 @end

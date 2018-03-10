@@ -10,4 +10,6 @@
 
 @interface MVPModel : NSObject
 
+@property(nonatomic, retain) NSString *content;
+
 @end
